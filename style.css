@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+:root {
+  --backgroundColor: hsl(0, 0%, 98%);
+  --boldtext: hsl(0, 0%, 8%);
+  --textcolor: hsl(0, 0%, 41%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--textcolor);
+}
+
+button {
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--boldtext);
+}
+
+.drop-down li {
+  display: block;
+}
+
+.toggleMenu {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--boldtext);
+  text-align: center;
+}
+
+header p {
+  color: var(--textcolor);
+  margin-top: 2rem;
+}
+
+header button {
+  background-color: var(--boldtext);
+  margin-top: 3rem;
+  padding: 0.6rem 1rem;
+}
+
+header button a {
+  color: var(--backgroundColor);
+}
+
+header .text-images {
+  margin-top: 5rem;
+}
+.text-images img {
+  max-width: 4rem;
+}
+
+.header-image img {
+  max-width: 30rem;
+  min-height: 25rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  br {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  li {
+    display: block;
+    text-align: center;
+    padding-block: 1rem;
+  }
+
+  .toggleMenu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .open {
+    height: 20rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  header {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header .button {
+    text-align: center;
+  }
+
+  header .text-images {
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  header .header-image img {
+    width: 20rem;
+    height: 10vh;
+  }
+
+  header h1 {
+    text-align: center;
+  }
+}
